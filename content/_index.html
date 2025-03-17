@@ -1,0 +1,69 @@
+
+<div class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+  {{< picture
+      path="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+      brand="Brand"
+      name="Name"
+      price=100
+      description="Descriere"
+  >}}
+  {{< picture
+      path="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+      brand="Brand"
+      name="Name"
+      price=100
+      description="Descriere"
+  >}}
+  {{< picture
+      path="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+      brand="Brand"
+      name="Name"
+      price=100
+      description="Descriere"
+  >}}
+  {{< picture
+      path="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+      brand="Brand"
+      name="Name"
+      price=100
+      description="Descriere"
+  >}}
+  {{< picture
+      path="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+      brand="Brand"
+      name="Name"
+      price=100
+      description="Descriere"
+  >}}
+  {{< picture
+      path="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+      brand="Brand"
+      name="Name"
+      price=100
+      description="Descriere"
+  >}}
+</div>
+
+<div id="modal" class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center" href="javascript:void(0)" onclick="closeModal()">
+    <img id="modal-img" class="max-w-[800px] max-h-[600px] object-cover"/>
+</div>
+
+<script>
+    var images = document.querySelectorAll('img');
+	images.forEach(function (img) {
+		img.addEventListener('click', function () {
+			showModal(img.src);
+		});
+	});
+	var modal = document.getElementById("modal");
+	var modalImg = document.getElementById("modal-img");
+
+	function showModal(src) {
+		modal.classList.remove('hidden');
+		modalImg.src = src;
+	}
+
+	function closeModal() {
+		modal.classList.add('hidden');
+	}
+</script>

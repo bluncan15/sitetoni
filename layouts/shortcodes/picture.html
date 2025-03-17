@@ -1,0 +1,13 @@
+<div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl ">
+  <a href="#">
+    <img src="{{ .Params.path }}" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+      <span class="text-gray-400 mr-3 uppercase text-xs">{{ .Params.brand }}</span>
+      <p class="text-lg font-bold text-black truncate block capitalize">{{ .Params.name }}</p>
+      <div class="flex items-center">
+        <p class="text-lg font-semibold text-black cursor-auto my-3">{{ .Params.price }} RON </p>
+      </div>
+      <p class="text-lg font-semibold text-black cursor-auto my-3"> {{ .Params.description }} </p>
+    </div>
+  </a>
+</div>
