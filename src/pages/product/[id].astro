@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductPage from '../../components/ProductPage'
+import { products } from '../../assets/constants';
+
+export function getStaticPaths() {
+  return products.map((product) => ({
+		params: { id: product._id}
+	}));
+}
+
+const { id } = Astro.params;
+---
+<main>
+<Layout>
+  <ProductPage productId={id} client:load />
+</Layout>
+</main>

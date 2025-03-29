@@ -1,14 +1,26 @@
+---
+import "../styles/global.css";
+import 'keen-slider/keen-slider.min.css';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { ClientRouter } from "astro:transitions";
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="ro">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Domeniu.ro</title>
+		<ClientRouter />
 	</head>
 	<body>
-		<slot />
+		<div class="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] bg-white" transition:animate="fade">
+			<Navbar client:load />
+			<slot />
+			<Footer />
+		</div>
 	</body>
 </html>
 

@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "sitetoni",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.5.3"
+    "@astrojs/react": "^4.2.1",
+    "@nanostores/persistent": "^0.10.2",
+    "@nanostores/react": "^0.8.4",
+    "@tailwindcss/vite": "^4.0.15",
+    "@types/react": "^19.0.12",
+    "astro": "^5.5.3",
+    "keen-slider": "^6.8.6",
+    "nanostores": "^0.11.4",
+    "react": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "tailwindcss": "^4.0.15"
   }
 }
