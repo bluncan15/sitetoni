@@ -51,7 +51,7 @@ const Preview = () => {
             ))}
           </div>
           <div className="flex items-center gap-2 py-2 md:py-6">
-            <a className="pointer-cursor" href="/contact">
+            <a className="pointer-cursor" href="/sitetoni/contact">
               <p className="font-semibold text-sm md:text-2xl ">
                 CONTACTEAZĂ-NE ACUM
               </p>

@@ -16,7 +16,7 @@ const Navbar = () => {
       {/* Primul rând: Logo + Contact Info */}
       <div className="flex justify-between items-center py-3 px-5">
         {/* Logo în stânga */}
-        <a href="/">
+        <a href="/sitetoni">
           <img src={assets.logo.src} alt="logo" className="w-16 md:w-32" />
         </a>
 
@@ -54,16 +54,16 @@ const Navbar = () => {
       <div className="flex justify-between items-center py-2 px-5 rounded-md border-t-4 border-[#0ac0ac]">
         {/* Linkuri centrate */}
         <ul className="hidden sm:flex gap-5 text-xl text-gray-700 mx-auto">
-          <a href="/" className="flex flex-col items-center gap-1">
+          <a href="/sitetoni" className="flex flex-col items-center gap-1">
             <p>ACASĂ</p>
           </a>
           {/* <a href="/products" className="flex flex-col items-center gap-1">
             <p>PRODUSE</p>
           </a> */}
-          <a href="/about" className="flex flex-col items-center gap-1">
+          <a href="/sitetoni/about" className="flex flex-col items-center gap-1">
             <p>DESPRE NOI</p>
           </a>
-          <a href="/contact" className="flex flex-col items-center gap-1">
+          <a href="/sitetoni/contact" className="flex flex-col items-center gap-1">
             <p>CONTACT</p>
           </a>
         </ul>
@@ -79,7 +79,7 @@ const Navbar = () => {
           /> */}
 
           {/* Cart Icon */}
-          <a href="/cart" className="relative">
+          <a href="/sitetoni/cart" className="relative">
             <img
               src={assets.cart_icon.src}
               alt="cart"
@@ -120,7 +120,7 @@ const Navbar = () => {
           <a
             onClick={() => setVisible(false)}
             className="py-2 pl-6 border"
-            href="/"
+            href="/sitetoni"
           >
             ACASĂ
           </a>
@@ -134,14 +134,14 @@ const Navbar = () => {
           <a
             onClick={() => setVisible(false)}
             className="py-2 pl-6 border"
-            href="/about"
+            href="/sitetoni/about"
           >
             DESPRE NOI
           </a>
           <a
             onClick={() => setVisible(false)}
             className="py-2 pl-6 border"
-            href="/contact"
+            href="/sitetoni/contact"
           >
             CONTACT
           </a>

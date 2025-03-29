@@ -1,6 +1,6 @@
 const CategoryItem = ({id, src, name, description}) => {
   return (
-    <a href='/products' className="text-gray-700 cursor-pointer">
+    <a href="/sitetoni/products" className="text-gray-700 cursor-pointer">
       <div className="overflow-hidden border-2 border-[#0ac0ac] rounded-lg p-4 shadow-sm  h-[300px]">
         <img
           src={src}
