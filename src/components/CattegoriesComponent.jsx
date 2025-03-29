@@ -1,7 +1,7 @@
 // import { useContext, useEffect, useState } from 'react';
-import Title from '../components/Title';
+import Title from './Title';
 // import ProductItem from '../components/ProductItem';
-import CategoryItem from '../components/CategoryItem';
+import CategoryItem from './CategoryItem';
 import { categories } from '../assets/constants';
 
 const CattegoriesComponent = () => {

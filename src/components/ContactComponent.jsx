@@ -1,6 +1,6 @@
 import { assets } from "../assets/assets";
-import Title from "../Components/Title";
 import { constants } from "../assets/constants"
+import Title from "./Title";
 
 const ContactComponent = () => {
   const scrollToTop = () => {

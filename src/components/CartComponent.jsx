@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Title from "../Components/Title";
+import Title from "./Title";
 import { assets } from "../assets/assets";
 import useLazyStore from "../assets/useLazyStore";
-import CartTotal from "../Components/CartTotal";
+import CartTotal from "./CartTotal";
 import { useStore } from "@nanostores/react";
 import { getCartItems, removeFromCart, $cart } from "../shared/cart";
 
