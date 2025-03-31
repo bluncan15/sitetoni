@@ -37,9 +37,9 @@ const Preview = () => {
     <div className="flex flex-col sm:flex-row gap-2 md:gap-24">
       <div className="w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0">
         <div className="text-[#414141]">
-          <div className="flex items-center gap-2">
+          <div className="flex justify-left">
             <p className="w-8 md:w-11 h-[2px] bg-[#414141]"></p>
-            <p className="font-medium text-sm md:text-4xl">
+            <p className="font-medium text-sm md:text-4xl border-t-2 rounded-lg border-[#0ac0ac]">
               FURNIZORII NOȘTRII
             </p>
           </div>
@@ -50,9 +50,9 @@ const Preview = () => {
               </a>
             ))}
           </div>
-          <div className="flex items-center gap-2 py-2 md:py-6">
+          <div className="flex justify-center py-2 md:py-6 gap-2 md:gap-24">
             <a className="pointer-cursor" href="/sitetoni/contact">
-              <p className="font-semibold text-sm md:text-2xl ">
+              <p className="font-semibold text-sm md:text-4xl border-b-2 rounded-lg border-[#0ac0ac] hover:shadow-2xl">
                 CONTACTEAZĂ-NE ACUM
               </p>
             </a>

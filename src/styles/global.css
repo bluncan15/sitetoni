@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Montserrat:wght@800&display=swap');
 
 @import "tailwindcss";
 
@@ -7,11 +7,17 @@ a.active hr {
 }
 
 * {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Lora', serif;
   font-weight: 600;
   font-style: normal;
   background-color: #ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+}
+
+h1, h2, .montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 ::-webkit-scrollbar {

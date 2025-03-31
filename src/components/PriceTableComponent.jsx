@@ -3,8 +3,8 @@ import { get_thickness_by_id, get_color_type_by_ids } from '../assets/utils';
 
 const PriceTableComponent = ({ product }) => {
   return (
-    <div className="relative overflow-x-auto mt-4">
-      <table className="w-full text-sm text-left rtl:text-right text-black">
+    <div className="relative overflow-x-auto mt-4 border-[#c07a0a] rounded-lg">
+      <table className="w-full text-sm text-left rtl:text-right text-black border-2">
         <thead className="text-xs text-black uppercase bg-[#0ac0ac] ">
           <tr>
             <th scope="col" className="px-6 py-3">
@@ -21,7 +21,7 @@ const PriceTableComponent = ({ product }) => {
         <tbody>
           {
             product.prices.map((p, key) => (
-              <tr key={key} className="bg-white border-b border-gray-200">
+              <tr key={key} className="bg-white border-1 border-[#c07a0a]">
                 <td className="px-6 py-4">{get_thickness_by_id(p.thickness_id).value}</td>
                 <td className="px-6 py-4 uppercase">
                   {
