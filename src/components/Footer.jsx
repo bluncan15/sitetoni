@@ -18,14 +18,14 @@ const Footer = () => {
         <div className="">
           <img src={assets.logo.src} alt="" className="mb-5 w-32 " />
           <p className="w-full sm:w-2/3 text-[#0ac0ac]">
-            Millenium {} <span className="text-gray-500">Dach Roof </span>
+            Millenium {} <span className="text-black">Dach Roof </span>
           </p>
         </div>
 
         <div className="">
           <p className="text-xl font-medium mb-5">Domeniu</p>
 
-          <ul className="flex flex-col flex-1 text-gray-600 cursor-pointer">
+          <ul className="flex flex-col flex-1 text-black cursor-pointer">
             <li onClick={scrollToTop} className="mb-2">
               Acasă
             </li>
@@ -37,7 +37,7 @@ const Footer = () => {
 
         <div className="">
           <p className="text-xl font-medium mb-5">Contactează-ne</p>
-          <ul className="flex flex-col flex-1 text-gray-600 gap-0.5">
+          <ul className="flex flex-col flex-1 text-black gap-0.5">
           <li>
             <div className="flex gap-1">
               <CiPhone color="#0ac0ac"/>

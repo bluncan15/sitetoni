@@ -119,7 +119,7 @@ const Product = ({ productId }) => {
               ? "De la " + getCurrentPrice() + " RON / mp"
               : ""}
           </p>
-          <p className="mt-5 text-gray-500 md:w-4/5 ">
+          <p className="mt-5 text-black md:w-4/5 ">
             {productsData.description}
           </p>
 
@@ -133,7 +133,7 @@ const Product = ({ productId }) => {
                     onClick={() => {
                       setThickness(thickness._id);
                     }}
-                    className={`cursor-pointer mb-6 p-4 rounded-md border-b-4 ${
+                    className={`cursor-pointer mb-6 p-4 rounded-lg border-b-4 ${
                       selectedThickness == thickness._id
                         ? " border-[#0ac0ac] font-bold"
                         : " border-gray-300"
@@ -176,7 +176,7 @@ const Product = ({ productId }) => {
                     setColor(color._id);
                   }}
                   key={color._id}
-                  className={`cursor-pointer mb-6 p-4 rounded-md border-b-4 ${
+                  className={`cursor-pointer mb-6 p-4 rounded-lg border-b-4 ${
                     selectedColor === color._id
                       ? " border-[#0ac0ac] font-bold"
                       : " border-gray-300"
@@ -187,7 +187,7 @@ const Product = ({ productId }) => {
                     className="mt-2"
                     style={{ backgroundColor: color.color, height: "30px" }}
                   ></div>
-                  <div className="text-gray-500">{color.description}</div>
+                  <div className="text-black">{color.description}</div>
                 </button>
               ))}
             </div>
@@ -202,7 +202,7 @@ const Product = ({ productId }) => {
 
           <hr className="border-[#0ac0ac] mt-8 sm:w-4/5" />
 
-          <div className="flex flex-col gap-1 mt-5 text-sm text-gray-500">
+          <div className="flex flex-col gap-1 mt-5 text-sm text-black">
             <p>Ceva descriere</p>
             <p>..........</p>
             <p> ......... </p>
@@ -219,7 +219,7 @@ const Product = ({ productId }) => {
           </b>
         </div>
 
-        <div className=" flex flex-col gap-4 border-[#0ac0ac] px-6 py-6 text-sm text-gray-500 ">
+        <div className=" flex flex-col gap-4 border-[#0ac0ac] px-6 py-6 text-sm text-black ">
           <p> Putem adauga ceva text sau putem sterge ... </p>
         </div>
       </div>

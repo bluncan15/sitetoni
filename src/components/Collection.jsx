@@ -108,14 +108,14 @@ const Collection = () => {
 
         {/* Category Filter */}
         <div
-          className={`border border-[#0ac0ac] pl-5 py-3 mt-6 ${
+          className={`border border-[#0ac0ac] rounded-lg pl-5 py-3 mt-6 ${
             showFilter ? '' : 'hidden'
           }
             sm:block`}
         >
           <p className="mb-3 text-sm font-medium">TIPURI</p>
 
-          <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
+          <div className="flex flex-col gap-2 text-sm font-light text-black">
             {
               categories.map((category, key) => (
                 <p key={key} className="flex gap-2">
@@ -134,14 +134,14 @@ const Collection = () => {
 
         {/* Sub Catrgory Filter */}
         <div
-          className={`border border-[#0ac0ac] pl-5 py-3 my-5 ${
+          className={`border border-[#0ac0ac] rounded-lg pl-5 py-3 my-5 ${
             showFilter ? '' : 'hidden'
           }
             sm:block`}
         >
           <p className="mb-3 text-sm font-medium">FURNIZORI</p>
 
-          <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
+          <div className="flex flex-col gap-2 text-sm font-light text-black">
             {
               suppliers.map((supplier, key) => (
                 <p key={key} className="flex gap-2">
@@ -172,7 +172,7 @@ const Collection = () => {
               setSortType(e.target.value);
             }}
             value={sortType}
-            className="border border-[#0ac0ac] text-sm px-2"
+            className="border border-[#0ac0ac] rounded-lg text-sm px-2"
           >
             <option value="relevent">Sortare: Relevent</option>
             <option value="low-high">Sortare: Preț crescător</option>

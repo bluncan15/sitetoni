@@ -9,7 +9,7 @@ import aqua from "./products/tigla_metalica/aqua.png";
 import celesta from "./products/tigla_metalica/celesta.png";
 import nova from "./products/tigla_metalica/nova.png";
 import terra from "./products/tigla_metalica/terra.png";
-import enigma from "./products/tigla_metalica/enigma.jpg";
+import enigma from "./products/tigla_metalica/enigma.png";
 import diament from "./products/tigla_metalica/diament.webp";
 import kingas from "./products/tigla_metalica/kingas.webp";
 

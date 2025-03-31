@@ -10,7 +10,7 @@ const Title = ({ text1, text2, show_line=true }) => {
   return (
     <div className="inline-flex gap-2 items-center mb-3">
       <p className="text-[#0ac0ac]">
-        {text1} <span className="text-gray-700 font-medium">{text2}</span>
+        {text1} <span className="text-black font-medium">{text2}</span>
       </p>
       {line}
     </div>

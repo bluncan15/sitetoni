@@ -5,13 +5,13 @@ import Title from './Title';
 
 const ProductItem = ({ product }) => {
   return (
-    <div className="text-gray-700">
+    <div className="text-black">
       <div className="border-[#0ac0ac] overflow-hidden border rounded-lg p-4 shadow-sm h-[710px]">
-        <a href={`/sitetoni/product/${product._id}`} className="cursoir-pointer">
+        <a href={`/sitetoni/product/${product._id}`} className="cursoir-pointer flex justify-center">
           <img
             src={product.images[0]}
             alt={product._id}
-            className="w-full h-64 object-cover mb-2 rounded hover:scale-110 transition ease-in-out duration-500 "
+            className="w-96 h-64 object-cover mb-2 rounded hover:scale-110 transition ease-in-out duration-600 "
           />
         </a>
         <div className="flex justify-center">

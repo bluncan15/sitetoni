@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
 
         {/* Contact Info în dreapta */}
-        <div className="flex flex-col gap-2 items-center text-gray-700">
+        <div className="flex flex-col gap-2 items-center text-black">
           <div className="flex items-center gap-1">
             <CiPhone color="#0ac0ac" />
             <a
@@ -52,9 +52,9 @@ const Navbar = () => {
       </div>
 
       {/* Al doilea rând: Navigație + Icons */}
-      <div className="flex justify-between items-center py-2 px-5 rounded-md border-t-4 border-[#0ac0ac]">
+      <div className="flex justify-between items-center py-2 px-5 rounded-lg border-t-4 border-[#0ac0ac]">
         {/* Linkuri centrate */}
-        <ul className="hidden sm:flex gap-5 text-xl text-gray-700 mx-auto">
+        <ul className="hidden sm:flex gap-5 text-xl text-black mx-auto">
           <a href="/sitetoni" className="flex flex-col items-center gap-1">
             <p>ACASĂ</p>
           </a>
@@ -97,7 +97,7 @@ const Navbar = () => {
         {/* Cart Icon */}
         <a href="/sitetoni/cart" className="relative">
           <img src={assets.cart_icon.src} alt="cart" className="w-7 min-w-7" />
-          <p className="absolute right-[-12px] bottom-[-6px] w-5 text-center leading-4 bg-black text-white aspect-square rounded-full text-[14px]">
+          <p className="absolute right-[-12px] bottom-[-6px] w-5 text-center leading-4 bg-black! text-white aspect-square rounded-full text-[14px]">
             {cartData.length}
           </p>
         </a>
@@ -108,7 +108,7 @@ const Navbar = () => {
         className={`absolute top-0 right-0 bg-white ease-in duration-350 overflow-hidden border-t-2 border-b-2 border-[#0ac0ac] rounded-lg
       ${visible ? "w-full" : "w-0"}`}
       >
-        <div className="flex flex-col text-gray-600 mb-10">
+        <div className="flex flex-col text-black mb-10">
           <div
             onClick={() => setVisible(false)}
             className="flex items-center gap-4 p-3 cursor-pointer"

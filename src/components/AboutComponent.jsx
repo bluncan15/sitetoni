@@ -16,28 +16,28 @@ const AboutComponent = ({full}) => {
       <div className="flex flex-col md:flex-row mb-20 text-sm gap-4">
         <div className="border border-[#0ac0ac] rounded-lg px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
           <b>Asigurarea Calității</b>
-          <p className="text-gray-600">
+          <p className="text-black">
             Ne mândrim cu oferirea exclusivă a produselor de cea mai înaltă calitate,
             care îndeplinesc standardele noastre stricte de durabilitate, performanță și valoare.
             </p>
         </div>
         <div className="border border-[#0ac0ac] rounded-lg px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
           <b>Experiență</b>
-          <p className="text-gray-600">
+          <p className="text-black">
             Avem peste 5 ani de experiență în domeniu, oferind servicii de calitate
             și produse de încredere.
           </p>
         </div>
         <div className="border border-[#0ac0ac] rounded-lg px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
           <b>Servicii excepționale pentru clienți</b>
-          <p className="text-gray-600">
+          <p className="text-black">
             Echipa noastră dedicată de asistență clienți este disponibilă 24/7 pentru
             a vă oferi suportul necesar și a răspunde oricăror întrebări sau nelămuriri.
           </p>
         </div>
         <div className="border border-[#0ac0ac] rounded-lg px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
           <b>Peste 900 de clienți mulțumiți</b>
-          <p className="text-gray-600">
+          <p className="text-black">
           Suntem mândri să avem peste 900 de clienți care ne aleg pentru calitatea și serviciile noastre.
           </p>
         </div>
@@ -52,8 +52,8 @@ const AboutComponent = ({full}) => {
             className="w-full md:max-w-[450px] "
           />
 
-          <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
-          <b className="text-gray-800">Despre noi</b>
+          <div className="flex flex-col justify-center gap-6 md:w-2/4 text-black">
+          <b className="text-black">Despre noi</b>
             <p>
               Suntem o companie specializata in producția de tabla faltuita,
               tigla metalica si capace atic, precum și accesorii speciale pentru acestea.
@@ -69,7 +69,7 @@ const AboutComponent = ({full}) => {
               Capacele atic sunt realizate din materiale de calitate, rezistente la intemperii,
               pentru a asigura o protectie eficienta pentru acoperisul dumneavoastra.
             </p>
-            <b className="text-gray-800">Echipa noastră</b>
+            <b className="text-black">Echipa noastră</b>
             <p>
               Suntem dedicați in oferirea unui serviciu de calitate, cu personal profesionist
               si experienta, care va sta la dispozitie pentru orice intrebari sau sfaturi in

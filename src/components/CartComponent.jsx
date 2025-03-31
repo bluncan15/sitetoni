@@ -56,7 +56,7 @@ const Cart = () => {
         return (
           <div
             key={index}
-            className="py-3 border-[#0ac0ac] border-b border-t text-gray-700 grid  grid-cols-[3fr_0.5fr_0.5fr] sm:grid-cols-[3fr_1fr_0.5fr] items-center gap-4"
+            className="py-3 border-[#0ac0ac] border-b border-t text-black grid  grid-cols-[3fr_0.5fr_0.5fr] sm:grid-cols-[3fr_1fr_0.5fr] items-center gap-4"
           >
             <div className="flex items-start gap-2 md:gap-6">
               <img src={product.images[0]} alt="" className="w-16 sm:w-20" />
@@ -100,7 +100,7 @@ const Cart = () => {
 
           <div className="w-full text-end">
             <button
-              className="my-8 px-8 py-3 bg-[#0ac0ac] text-black text-sm cursor-pointer"
+              className="my-8 px-8 py-3 bg-[#0ac0ac]! hover:shadow-md hover:bg-teal-500! text-black cursor-pointer rounded-lg"
               onClick={() => setShowModal(true)}
             >
               CERE OFERTĂ
@@ -109,19 +109,17 @@ const Cart = () => {
         </div>
       </div>
       {showModal && (
-        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-[1.5px] z-50">
+        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-1! z-50">
           <div className="relative p-4 w-full max-w-6xl max-h-[100vh] bg-white rounded-lg shadow-sm flex flex-col">
-            <ContactComponent message={generateMessage()} />
-
-            {/* Buton de ieșire jos */}
-            <div className="flex justify-center">
+          <div className="flex justify-left">
               <button
-                className="px-6 py-2 bg-[#0ac0ac] text-black text-md rounded-md hover:bg-[#089f9f] transition"
+                className="px-6 py-2 text-black text-md rounded-lg hover:bg-[#089f9f]! transition"
                 onClick={() => setShowModal(false)}
               >
-                IEȘIRE
+                ⬅
               </button>
             </div>
+            <ContactComponent message={generateMessage()} />
           </div>
         </div>
       )}
