@@ -23,14 +23,15 @@ const Footer = () => {
         </div>
 
         <div className="">
-          <p className="text-xl font-medium mb-5">Domeniu</p>
-
           <ul className="flex flex-col flex-1 text-black cursor-pointer">
-            <li onClick={scrollToTop} className="mb-2">
-              Acasă
+            <li className="mb-2">
+              <a href="/sitetoni/">Acasă</a>
             </li>
-            <li onClick={scrollToTop} className="mb-2">
-              Despre noi
+            <li className="mb-2">
+              <a href="/sitetoni/about/">Despre noi</a>
+            </li>
+            <li className="mb-2">
+              <a href="/sitetoni/contact/">Contact</a>
             </li>
           </ul>
         </div>
@@ -72,7 +73,7 @@ const Footer = () => {
       <div>
         <hr className="border-[#0ac0ac]"/>
           <p className="py-5 text-sm text-center">
-          &copy; 2025 Domeniu.ro. All Rights Reserved.
+          &copy; 2025 millenniumdachroof.ro. All Rights Reserved.
           </p>
       </div>
     </div>

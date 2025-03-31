@@ -39,3 +39,22 @@ h1, h2, .montserrat {
   opacity: 0;
   transition: opacity 0.7s ease-in-out;
 }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 4s infinite;
+}
+
+@keyframes fancyBlink {
+  0% { opacity: 1; color: red; transform: scale(1); }
+  50% { opacity: 0.7; color: blue; transform: scale(1.5); }
+  100% { opacity: 1; color: red; transform: scale(1); }
+}
+
+.fancy-blink {
+  animation: fancyBlink 4s infinite alternate;
+}
