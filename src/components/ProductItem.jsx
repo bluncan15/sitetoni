@@ -7,7 +7,7 @@ const ProductItem = ({ product }) => {
   return (
     <div className="text-black">
       <div className="border-[#0ac0ac] overflow-hidden border rounded-lg p-4 shadow-sm h-[710px]">
-        <a href={`/sitetoni/product/${product._id}`} className="cursoir-pointer flex justify-center">
+        <a href={`/sitetoni/product/${product._id}`} className="cursor-pointer flex justify-center hover:shadow-md">
           <img
             src={product.images[0]}
             alt={product._id}

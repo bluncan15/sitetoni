@@ -120,7 +120,7 @@ const ContactComponent = ( {message=""} ) => {
                     </div>
                     <div className="ml-6 grow">
                       <p className="md:mb-2 font-bold">Telefon</p>
-                      <a href={'tel:' + constants.PHONE_NUMBER} className="text-black cursor-pointer">{constants.PHONE_NUMBER}</a>
+                      <a href={'tel:' + constants.PHONE_NUMBER} className="text-black cursor-pointer hover:shadow-md">{constants.PHONE_NUMBER}</a>
                     </div>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ const ContactComponent = ( {message=""} ) => {
                     </div>
                     <div className="ml-6 grow">
                       <p className="md:mb-2 font-bold ">Email</p>
-                      <a href={'mailto:' + constants.EMAIL} className="text-black cursor-pointer">{constants.EMAIL}</a>
+                      <a href={'mailto:' + constants.EMAIL} className="text-black cursor-pointer hover:shadow-md">{constants.EMAIL}</a>
                     </div>
                   </div>
                 </div>

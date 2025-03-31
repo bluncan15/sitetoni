@@ -1,6 +1,7 @@
 import { assets } from "../assets/assets";
 import { useState, useEffect } from "react";
 import { CiPhone, CiMail } from "react-icons/ci";
+import { MdArrowBackIos } from "react-icons/md";
 import { constants } from "../assets/constants";
 import { useStore } from "@nanostores/react";
 import { $cart } from "../shared/cart";
@@ -17,7 +18,7 @@ const Navbar = () => {
       {/* Primul rând: Logo + Contact Info */}
       <div className="flex justify-between items-center py-3 px-5">
         {/* Logo în stânga */}
-        <a href="/sitetoni">
+        <a href="/sitetoni" className="hover:shadow-md">
           <img src={assets.logo.src} alt="logo" className="w-16 md:w-32" />
         </a>
 
@@ -34,7 +35,7 @@ const Navbar = () => {
             <CiPhone color="#0ac0ac" />
             <a
               href={"tel:" + constants.PHONE_NUMBER}
-              className="cursor-pointer text-xs/tight md:text-xl/tight"
+              className="cursor-pointer text-xs/tight md:text-xl/tight hover:shadow-md"
             >
               {constants.PHONE_NUMBER}
             </a>
@@ -43,7 +44,7 @@ const Navbar = () => {
             <CiMail color="#0ac0ac" />
             <a
               href={"mailto:" + constants.EMAIL}
-              className="cursor-pointer text-xs/tight md:text-base/tight"
+              className="cursor-pointer text-xs/tight md:text-base/tight hover:shadow-md"
             >
               {constants.EMAIL}
             </a>
@@ -55,7 +56,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center py-2 px-5 rounded-lg border-t-4 border-[#0ac0ac]">
         {/* Linkuri centrate */}
         <ul className="hidden sm:flex gap-5 text-xl text-black mx-auto">
-          <a href="/sitetoni" className="flex flex-col items-center gap-1">
+          <a href="/sitetoni" className="flex flex-col items-center gap-1 hover:shadow-md">
             <p>ACASĂ</p>
           </a>
           {/* <a href="/products" className="flex flex-col items-center gap-1">
@@ -63,13 +64,13 @@ const Navbar = () => {
           </a> */}
           <a
             href="/sitetoni/about"
-            className="flex flex-col items-center gap-1"
+            className="flex flex-col items-center gap-1 hover:shadow-md"
           >
             <p>DESPRE NOI</p>
           </a>
           <a
             href="/sitetoni/contact"
-            className="flex flex-col items-center gap-1"
+            className="flex flex-col items-center gap-1 hover:shadow-md"
           >
             <p>CONTACT</p>
           </a>
@@ -89,15 +90,15 @@ const Navbar = () => {
           <img
             src={assets.menu_icon.src}
             alt="menu"
-            className="w-5 cursor-pointer sm:hidden"
+            className="w-5 cursor-pointer sm:hidden hover:shadow-md"
             onClick={() => setVisible(!visible)}
           />
         </div>
 
         {/* Cart Icon */}
-        <a href="/sitetoni/cart" className="relative">
+        <a href="/sitetoni/cart" className="relative hover:shadow-md">
           <img src={assets.cart_icon.src} alt="cart" className="w-7 min-w-7" />
-          <p className="absolute right-[-12px] bottom-[-6px] w-5 text-center leading-4 bg-black! text-white aspect-square rounded-full text-[14px]">
+          <p className="absolute right-[-12px] bottom-[-6px] w-5 text-center leading-4 bg-black! text-white aspect-square rounded-full text-[14px] hover:shadow-md">
             {cartData.length}
           </p>
         </a>
@@ -113,19 +114,22 @@ const Navbar = () => {
             onClick={() => setVisible(false)}
             className="flex items-center gap-4 p-3 cursor-pointer"
           >
-            <img
+            <div className="flex justify-normal">
+              <MdArrowBackIos className="h-4" color="black" /> <span>Înapoi</span>
+            </div>
+            {/* <img
               src={assets.dropdown_icon.src}
               alt="close"
               className="h-4 rotate-180"
-            />
-            <p className="font-semibold">Înapoi</p>
+            /> */}
+            {/* <p className="font-semibold">Înapoi</p> */}
           </div>
           <a
             onClick={() => {
               setVisible(false);
               setCurrentPage(1);
             }}
-            className={`py-2 pl-6 border border-[#0ac0ac] rounded-lg ${currentPage == 1 ? "bg-[#0ac0ac]": "" }`}
+            className={`py-2 pl-6 border border-[#0ac0ac] rounded-lg hover:shadow-md ${currentPage == 1 ? "bg-[#0ac0ac]": "" }`}
             href="/sitetoni"
           >
             ACASĂ
@@ -142,7 +146,7 @@ const Navbar = () => {
               setVisible(false);
               setCurrentPage(2);
             }}
-            className={`py-2 pl-6 border border-[#0ac0ac] rounded-lg ${currentPage == 2 ? "bg-[#0ac0ac]": "" }`}
+            className={`py-2 pl-6 border border-[#0ac0ac] rounded-lg hover:shadow-md ${currentPage == 2 ? "bg-[#0ac0ac]": "" }`}
             href="/sitetoni/about"
           >
             DESPRE NOI
@@ -152,7 +156,7 @@ const Navbar = () => {
               setVisible(false);
               setCurrentPage(3);
             }}
-            className={`py-2 pl-6 border border-[#0ac0ac] rounded-lg ${currentPage == 3 ? "bg-[#0ac0ac]": "" }`}
+            className={`py-2 pl-6 border border-[#0ac0ac] rounded-lg hover:shadow-md ${currentPage == 3 ? "bg-[#0ac0ac]": "" }`}
             href="/sitetoni/contact"
           >
             CONTACT

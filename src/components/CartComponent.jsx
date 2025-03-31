@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { MdArrowBackIos } from "react-icons/md";
 import Title from "./Title";
 import { assets } from "../assets/assets";
 import useLazyStore from "../assets/useLazyStore";
@@ -110,13 +111,15 @@ const Cart = () => {
       </div>
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center backdrop-blur-1! z-50">
-          <div className="relative p-4 w-full max-w-6xl max-h-[100vh] bg-white rounded-lg shadow-sm flex flex-col">
+          <div className="relative p-4 w-full h-full overflow-y-auto rounded-lg shadow-sm flex flex-col">
           <div className="flex justify-left">
               <button
-                className="px-6 py-2 text-black text-md rounded-lg hover:bg-[#089f9f]! transition"
+                className="px-6 py-2 text-black text-md rounded-lg transition hover:shadow-md"
                 onClick={() => setShowModal(false)}
               >
-                ⬅
+                <div className="flex justify-normal">
+                  <MdArrowBackIos color="black" /> <span>Înapoi</span>
+                </div>
               </button>
             </div>
             <ContactComponent message={generateMessage()} />

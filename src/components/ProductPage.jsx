@@ -133,7 +133,7 @@ const Product = ({ productId }) => {
                     onClick={() => {
                       setThickness(thickness._id);
                     }}
-                    className={`cursor-pointer mb-6 p-4 rounded-lg border-b-4 ${
+                    className={`cursor-pointer mb-6 p-4 rounded-lg border-b-4 hover:shadow-2xl ${
                       selectedThickness == thickness._id
                         ? " border-[#0ac0ac] font-bold"
                         : " border-gray-300"
@@ -157,7 +157,7 @@ const Product = ({ productId }) => {
                     setColorType(type._id);
                     setColor(null);
                   }} // Setează tab-ul activ când se dă click pe un tab
-                  className={`cursor-pointer py-2 px-4 uppercase ${
+                  className={`cursor-pointer py-2 px-4 uppercase hover:shadow-2xl ${
                     selectedColorType === type._id
                       ? "border-b-2 border-[#0ac0ac] font-bold"
                       : ""
@@ -176,7 +176,7 @@ const Product = ({ productId }) => {
                     setColor(color._id);
                   }}
                   key={color._id}
-                  className={`cursor-pointer mb-6 p-4 rounded-lg border-b-4 ${
+                  className={`cursor-pointer mb-6 p-4 rounded-lg border-b-4 hover:shadow-2xl ${
                     selectedColor === color._id
                       ? " border-[#0ac0ac] font-bold"
                       : " border-gray-300"
@@ -195,7 +195,7 @@ const Product = ({ productId }) => {
 
           <button
             onClick={addProductToCart}
-            className="bg-[#0ac0ac] rounded-lg py-3 px-8 text-sm active:bg-gray-700"
+            className="bg-[#0ac0ac]! rounded-lg py-3 px-8 text-sm active:bg-gray-700 flex hover:shadow-2xl"
           >
             Adaugă în coș
           </button>
