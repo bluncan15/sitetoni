@@ -3,6 +3,7 @@ import Title from "./Title";
 import { assets } from "../assets/assets";
 import useLazyStore from "../assets/useLazyStore";
 import CartTotal from "./CartTotal";
+import ContactComponent from "./ContactComponent";
 import { useStore } from "@nanostores/react";
 import { getCartItems, removeFromCart, $cart } from "../shared/cart";
 
@@ -16,10 +17,29 @@ import {
 const Cart = () => {
   let currency = " RON";
   const [cartItems] = useLazyStore($cart, []);
+  const [showModal, setShowModal] = useState(false);
 
-  const getCartTotal = () => {
+  function getCartTotal() {
     return cartItems.reduce((a, b) => +a + b.price, 0);
-  };
+  }
+
+  function generateMessage() {
+    let msg = "Produse in coș:\n";
+    cartItems.forEach((item) => {
+      let product = get_product_by_id(item._id);
+      let color = get_color_by_id(item.color);
+      let thickness = get_thickness_by_id(item.thickness);
+      let color_type = get_color_type_by_id(item.color_type);
+
+      msg += `\tProdus: ${product.name}\n\t\
+      -Grosime: ${thickness.value}\n\t\
+      -Culoare: ${color.name} ${color_type.name}\n\t\
+      -Preț: ${item.price}\n`;
+    });
+
+    console.log(msg);
+    return msg;
+  }
 
   return (
     <div className="pt-14">
@@ -79,12 +99,32 @@ const Cart = () => {
           <CartTotal total={getCartTotal()} />
 
           <div className="w-full text-end">
-            <button className="my-8 px-8 py-3 bg-[#0ac0ac] text-black text-sm cursor-pointer">
+            <button
+              className="my-8 px-8 py-3 bg-[#0ac0ac] text-black text-sm cursor-pointer"
+              onClick={() => setShowModal(true)}
+            >
               CERE OFERTĂ
             </button>
           </div>
         </div>
       </div>
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-[1.5px] z-50">
+          <div className="relative p-4 w-full max-w-6xl max-h-[100vh] bg-white rounded-lg shadow-sm flex flex-col">
+            <ContactComponent message={generateMessage()} />
+
+            {/* Buton de ieșire jos */}
+            <div className="flex justify-center">
+              <button
+                className="px-6 py-2 bg-[#0ac0ac] text-black text-md rounded-md hover:bg-[#089f9f] transition"
+                onClick={() => setShowModal(false)}
+              >
+                IEȘIRE
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

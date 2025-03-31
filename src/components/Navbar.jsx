@@ -10,6 +10,7 @@ const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [cartData] = useLazyStore($cart, []);
+  const [currentPage, setCurrentPage] = useState(0);
 
   return (
     <div className="w-full border-b-4 rounded-lg border-[#0ac0ac]">
@@ -60,10 +61,16 @@ const Navbar = () => {
           {/* <a href="/products" className="flex flex-col items-center gap-1">
             <p>PRODUSE</p>
           </a> */}
-          <a href="/sitetoni/about" className="flex flex-col items-center gap-1">
+          <a
+            href="/sitetoni/about"
+            className="flex flex-col items-center gap-1"
+          >
             <p>DESPRE NOI</p>
           </a>
-          <a href="/sitetoni/contact" className="flex flex-col items-center gap-1">
+          <a
+            href="/sitetoni/contact"
+            className="flex flex-col items-center gap-1"
+          >
             <p>CONTACT</p>
           </a>
         </ul>
@@ -78,18 +85,6 @@ const Navbar = () => {
             className="w-5 cursor-pointer"
           /> */}
 
-          {/* Cart Icon */}
-          <a href="/sitetoni/cart" className="relative">
-            <img
-              src={assets.cart_icon.src}
-              alt="cart"
-              className="w-7 min-w-7"
-            />
-            <p className="absolute right-[-12px] bottom-[-6px] w-5 text-center leading-4 bg-black text-white aspect-square rounded-full text-[14px]">
-              {cartData.length}
-            </p>
-          </a>
-
           {/* Menu Icon (pentru mobil) */}
           <img
             src={assets.menu_icon.src}
@@ -98,14 +93,22 @@ const Navbar = () => {
             onClick={() => setVisible(!visible)}
           />
         </div>
+
+        {/* Cart Icon */}
+        <a href="/sitetoni/cart" className="relative">
+          <img src={assets.cart_icon.src} alt="cart" className="w-7 min-w-7" />
+          <p className="absolute right-[-12px] bottom-[-6px] w-5 text-center leading-4 bg-black text-white aspect-square rounded-full text-[14px]">
+            {cartData.length}
+          </p>
+        </a>
       </div>
 
       {/* Sidebar pentru Mobile */}
       <div
-        className={`absolute top-0 right-0 bottom-0 bg-white ease-in duration-300 overflow-hidden
+        className={`absolute top-0 right-0 bg-white ease-in duration-350 overflow-hidden border-t-2 border-b-2 border-[#0ac0ac] rounded-lg
       ${visible ? "w-full" : "w-0"}`}
       >
-        <div className="flex flex-col text-gray-600">
+        <div className="flex flex-col text-gray-600 mb-10">
           <div
             onClick={() => setVisible(false)}
             className="flex items-center gap-4 p-3 cursor-pointer"
@@ -115,11 +118,14 @@ const Navbar = () => {
               alt="close"
               className="h-4 rotate-180"
             />
-            <p className="font-semibold">Back</p>
+            <p className="font-semibold">Înapoi</p>
           </div>
           <a
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
+            onClick={() => {
+              setVisible(false);
+              setCurrentPage(1);
+            }}
+            className={`py-2 pl-6 border border-[#0ac0ac] rounded-lg ${currentPage == 1 ? "bg-[#0ac0ac]": "" }`}
             href="/sitetoni"
           >
             ACASĂ
@@ -132,15 +138,21 @@ const Navbar = () => {
             PRODUSE
           </a> */}
           <a
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
+            onClick={() => {
+              setVisible(false);
+              setCurrentPage(2);
+            }}
+            className={`py-2 pl-6 border border-[#0ac0ac] rounded-lg ${currentPage == 2 ? "bg-[#0ac0ac]": "" }`}
             href="/sitetoni/about"
           >
             DESPRE NOI
           </a>
           <a
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
+            onClick={() => {
+              setVisible(false);
+              setCurrentPage(3);
+            }}
+            className={`py-2 pl-6 border border-[#0ac0ac] rounded-lg ${currentPage == 3 ? "bg-[#0ac0ac]": "" }`}
             href="/sitetoni/contact"
           >
             CONTACT

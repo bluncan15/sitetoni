@@ -1,8 +1,13 @@
+
+import { useState } from 'react';
 import { assets } from "../assets/assets";
 import { constants } from "../assets/constants"
 import Title from "./Title";
 
-const ContactComponent = () => {
+const ContactComponent = ( {message=""} ) => {
+
+  let [currentMessage, setMessage] = useState(message);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -58,7 +63,7 @@ const ContactComponent = () => {
                   Număr de telefon
                 </label>
                 <input
-                  type="email"
+                  type="phone"
                   class="px-2 py-2 border w-full outline-none rounded-md"
                   id="exampleInput90"
                   placeholder="Introduceți numărul de telefon"
@@ -74,15 +79,18 @@ const ContactComponent = () => {
                 </label>
                 <textarea
                   class="px-2 py-2 border rounded-[5px] w-full outline-none"
-                  name=""
-                  id=""
+                  name="message"
+                  id="message"
                   placeholder="Introduceți mesajul"
-                ></textarea>
+                  value={currentMessage}
+                  onChange={(e) => {setMessage(e.target.value)}}
+                >
+                </textarea>
               </div>
 
               <button
-                type="button"
-                class="mb-6 inline-block w-full rounded bg-teal-400 px-6 py-2.5 font-medium uppercase leading-normal text-white hover:shadow-md hover:bg-teal-500"
+                class="mb-6 inline-block w-full rounded bg-teal-400 px-6 py-2.5 font-medium uppercase leading-normal text-black hover:shadow-md hover:bg-teal-500"
+                onClick={() => {console.log(currentMessage)}}
               >
                 Trimite
               </button>
@@ -90,10 +98,10 @@ const ContactComponent = () => {
 
             <div class="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
               <div class="flex flex-wrap">
-                <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                <div class="mb-2 md:mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
                   <div class="flex items-start">
                     <div class="shrink-0">
-                      <div class="inline-block rounded-md bg-teal-400-100 p-4 text-teal-700">
+                      <div class="inline-block rounded-md bg-teal-400-100 ml-4 text-teal-700">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -111,15 +119,15 @@ const ContactComponent = () => {
                       </div>
                     </div>
                     <div class="ml-6 grow">
-                      <p class="mb-2 font-bold">Telefon</p>
+                      <p class="md:mb-2 font-bold">Telefon</p>
                       <a href={'tel:' + constants.PHONE_NUMBER} class="text-neutral-500 cursor-pointer">{constants.PHONE_NUMBER}</a>
                     </div>
                   </div>
                 </div>
-                <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
+                <div class="md:mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
                   <div class="align-start flex">
                     <div class="shrink-0">
-                      <div class="inline-block rounded-md bg-teal-400-100 p-4 text-teal-700">
+                      <div class="inline-block rounded-md bg-teal-400-100 ml-4 text-teal-700">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -137,7 +145,7 @@ const ContactComponent = () => {
                       </div>
                     </div>
                     <div class="ml-6 grow">
-                      <p class="mb-2 font-bold ">Email</p>
+                      <p class="md:mb-2 font-bold ">Email</p>
                       <a href={'mailto:' + constants.EMAIL} class="text-neutral-500 cursor-pointer">{constants.EMAIL}</a>
                     </div>
                   </div>
@@ -146,42 +154,6 @@ const ContactComponent = () => {
             </div>
           </div>
         </section>
-      </div>
-
-      <div className="flex flex-col justify-center sm:flex-row gap-10 my-10 mb-28">
-        {/* <img
-          src={assets.contact_img.src}
-          alt=""
-          className="w-full sm:max-w-[480px]"
-        /> */}
-
-        {/* <div className="flex flex-col justify-center items-start gap-4">
-          <p className="font-semibold text-altext-gray-600">Our Store</p>
-          <p className="text-gray-500">
-            7298 King Lodge
-            <br />
-            North Elton, Illinois 78154
-          </p>
-
-          <p className="text-gray-800">
-            Tel: <span className="text-gray-500">+1 800 123 1234</span>
-          </p>
-          <p className=" text-gray-800">
-            Email: <span className="text-gray-500">admin@forever.com</span>
-          </p>
-
-          <p className="text-gray-500">Careers at Forever</p>
-          <p className="text-gray-500">
-            Learn more about our teams and job openings.
-          </p>
-
-          <button
-            className="border border-black px-8 py-4 text-sm hover:bg-black hover:text-white  transition-all duration-500 "
-            onClick={scrollToTop}
-          >
-            Explore Jobs
-          </button>
-        </div> */}
       </div>
     </div>
   );

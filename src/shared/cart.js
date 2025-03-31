@@ -7,8 +7,6 @@ export const $cart = persistentAtom('cart', [], {
 });
 
 export function addToCart(item) {
-  console.log($cart.get());
-  console.log(item);
   let shouldAdd = true;
   $cart.get().map(c => {
     if (c._id === item._id &&
